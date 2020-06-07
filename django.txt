@@ -1,0 +1,7 @@
+if it seems wrking and still getting the errors -> rerun the server
+
+in views.py :
+    seperate always into 2 type: 
+    -> fuction_name_view: get html files 
+    -> function_name: controllers
+     and do not mix them
