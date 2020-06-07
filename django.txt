@@ -14,3 +14,8 @@
 ex: for buttons:  diplay and margin workd together
     display: block ;
     margin: auto;
+
+
+================================13
+passing context dictionary to redirect method -> is not possible : except by yrl
+to display messages : use messages methode

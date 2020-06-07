@@ -1,5 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate, login
+from django.contrib import messages
+
 
 # Create your views here.
 
@@ -15,8 +17,9 @@ def adminlogin(request):
         login(request, user)
         return redirect('adminhome')
     else:
-        print("FAILD!!!!")
-    return redirect(request.META['HTTP_REFERER'])
+        #messages.add_message(request, messages.ERROR, "Invalid creadentials")
+        messages.error(request, 'Invalid credentials')
+        return redirect(request.META['HTTP_REFERER'])
 
 
 def adminhomeview(request):
