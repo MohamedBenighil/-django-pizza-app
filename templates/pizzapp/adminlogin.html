@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Admin</h1>
-<form method="post" action="/adminlogin/">
-    {% csrf_token %}    
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <input type="submit" class="btn btn-success" value="Connect" >
-</form>
+<div class="adminlogin-div">
+    <h1>Admin login</h1>
+    <form method="post" action="/adminlogin/">
+        {% csrf_token %}    
+        <input type="text" class="form-control" name="username" placeholder="username">
+        <input type="password" class="form-control"  name="password" placeholder="password">
+        <input type="submit" class="btn btn-success" value="Connect" >
+    </form>
+</div>
 {% endblock %}

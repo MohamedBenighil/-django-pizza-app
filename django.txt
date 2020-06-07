@@ -1,7 +1,16 @@
-if it seems wrking and still getting the errors -> rerun the server
+-if it seems wrking and still getting the errors -> rerun the server
 
-in views.py :
+-in views.py :
     seperate always into 2 type: 
     -> fuction_name_view: get html files 
     -> function_name: controllers
      and do not mix them
+
+-to add css:
+    static/css/style.css
+    base.html : {% load static%}
+                href="{% static 'css/style.css' %}"
+
+ex: for buttons:  diplay and margin workd together
+    display: block ;
+    margin: auto;
