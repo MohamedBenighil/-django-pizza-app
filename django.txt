@@ -23,3 +23,6 @@ to display messages : use messages methode
 
 ================================14
 you should add href=/adminlogout to avoid appending to url. if still not working, restart the server
+
+IMPORTANT: if css not updated -> delete chrom's cash : ctr+shift+delete
+be carful for indentation errors

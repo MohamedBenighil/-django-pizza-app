@@ -1,9 +1,42 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand">Welcome Admin</a>
     <a href="/adminlogout" class="btn btn-danger">Logout</a>
 </nav>
-<h1>Admin home page</h1>
+
+
+<div class="pizza-add-div">
+    <form action="/adminaddpizza/" method="POST">
+        {% csrf_token %}
+        <input type="text" class="form-control" name="name" placeholder="Name" >
+        <input type="text" class="form-control" name="price" placeholder="Price" >
+        <input type="submit" value="add" class="btn btn-success">
+    </form>
+</div>
+
+{% if pizzas %}
+<div class="admin-table-pizza-div">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Pizza Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pizza in pizzas %}
+      <tr>
+        <th scope="row">{{pizza.name}}</th>
+        <td>{{pizza.price}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+
 {% endblock %}

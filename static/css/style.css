@@ -26,3 +26,29 @@
     text-align: center;
     color: red;
 }
+
+.pizza-add-div{
+    width: 30%;
+    display: block;
+    margin: auto;
+
+
+}
+
+.pizza-add-div input[type="text"]{
+    width: 43%;
+    display: inline;
+    margin: auto;
+    
+}
+
+.pizza-add-div input[type="submit"]{
+    display: inline;
+    margin: auto;
+}
+
+.admin-table-pizza-div{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
