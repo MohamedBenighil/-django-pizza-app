@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
 from django.contrib import messages
 
 
@@ -25,7 +25,11 @@ def adminlogin(request):
 def adminhomeview(request):
     return render(request, 'pizzapp/adminhome.html')
 
+def adminlogout(request):
+    logout(request)
+    return redirect('adminloginview')
+
 
 def userauth(request):
-    return render(request,'pizzapp/userauth.html')
+    return redirect(request,'pizzapp/userauth.html')
 
