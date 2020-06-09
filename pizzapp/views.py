@@ -40,6 +40,10 @@ def adminaddpizza(request):
     pizza.save()
     return redirect(request.META['HTTP_REFERER'])
 
+def admindeletepizza(request, pizzaid):
+    PizzaModel.objects.filter(id=pizzaid).delete()
+    return redirect(request.META['HTTP_REFERER'])
+
 
 
 

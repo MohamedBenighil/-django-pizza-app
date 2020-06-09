@@ -24,6 +24,7 @@
       <tr>
         <th scope="col">Pizza Name</th>
         <th scope="col">Price</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -31,6 +32,7 @@
       <tr>
         <th scope="row">{{pizza.name}}</th>
         <td>{{pizza.price}}</td>
+        <td><a href="/admindeletepizza/{{pizza.id}}" class="btn btn-danger">Delete</a></td>
       </tr>
       {% endfor %}
     </tbody>
