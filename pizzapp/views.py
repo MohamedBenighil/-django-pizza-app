@@ -47,8 +47,8 @@ def admindeletepizza(request, pizzaid):
 
 
 #USERS
-def userloginview(request):
-    return render(request,'pizzapp/userlogin.html')
+def homeview(request):
+    return render(request, 'pizzapp/home.html')
 
-def userhomeview(request):
-    return render(request, 'pizzapp/userhome.html')
+#def userloginview(request):
+#    return render(request,'pizzapp/userlogin.html')

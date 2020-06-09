@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path
-from .views import adminloginview,userloginview,adminlogin,adminhomeview,adminlogout,adminaddpizza,admindeletepizza,userhomeview
+from .views import adminloginview,adminlogin,\
+                   adminhomeview,adminlogout,adminaddpizza,\
+                   admindeletepizza,homeview
 
 urlpatterns = [
     #ADMIN
@@ -11,6 +13,6 @@ urlpatterns = [
     path('adminaddpizza/', adminaddpizza),
     path('admindeletepizza/<int:pizzaid>', admindeletepizza),
     #USER
-    path('', userloginview),
-    path('userhome/', userhomeview)
+    path('', homeview),
+    #path('userhome/', userhomeview)
 ]

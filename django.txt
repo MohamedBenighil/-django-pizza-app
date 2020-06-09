@@ -33,3 +33,7 @@ css: position :
 - relative (to itself)= ( default=static <=> you can not move them)+ (top, buttom,  left and right <=> you can move it)
 - "absolute" follows the 1st "relative" parent 
 - sticky = relative + fixed
+
+- be carfule : ex margin: auto margin-top: 10px <=/=> margin-top: 10px margin:auto
+
+IMPORTANT : float: right <=> div-parent{position: relative} div-child{position: absolute; right:20px}

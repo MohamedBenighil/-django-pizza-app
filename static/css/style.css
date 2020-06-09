@@ -56,3 +56,39 @@
     margin: auto;
     margin-top: 20px;
 }
+
+/*USER*/
+.container-userlogin-dev{
+    position: relative;
+}
+
+.userlogin-div{
+    background-color: orange;
+    width: 500px;
+    height: 350px;
+    padding-top: 50px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.userlogin-div input[type="text"], input[type="password"]{
+    width: 400px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.userlogin-div h1{
+    text-align: center;
+}
+
+
+.userlogin-div h1{
+    color: white;
+}
+
+.userlogin-div input[type="submit"]{
+    display: block;
+    margin: auto;
+    
+}
