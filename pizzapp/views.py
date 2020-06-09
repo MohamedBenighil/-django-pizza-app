@@ -3,7 +3,6 @@ from django.contrib.auth import authenticate, login,logout
 from django.contrib import messages
 from .models import PizzaModel
 
-
 # Create your views here.
 
 #Admin
