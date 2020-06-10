@@ -37,3 +37,9 @@ css: position :
 - be carfule : ex margin: auto margin-top: 10px <=/=> margin-top: 10px margin:auto
 
 IMPORTANT : float: right <=> div-parent{position: relative} div-child{position: absolute; right:20px}
+
+
+
+==================================19
+IMPRTANT
+if you refere to css like : "{% static 'css/style.css' %}" => you refer to images "../img/imagename.jpg"

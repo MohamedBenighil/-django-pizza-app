@@ -7,19 +7,20 @@
     padding: 20px;
 }
 
-.adminlogin-div input[name="username"]{
+.adminlogin-div input[type="text"], .adminlogin-div input[type="password"]{
     margin-bottom: 15px;
 }
+
 
 .adminlogin-div input[type="submit"]{
     display: block;
     margin: auto;
-    margin-top: 10px;
 }
 
 .adminlogin-div h1{
     text-align: center;
     color: white;
+    margin-top: 0px;
 }
 
 .message{
@@ -27,6 +28,7 @@
     color: red;
 }
 
+/* ADMIN HOME PAGE */
 .pizza-add-div{
     width: 30%;
     display: block;
@@ -60,6 +62,10 @@
 /*USER*/
 .container-userlogin-dev{
     position: relative;
+    height: 700px;
+    background: url("../img/pizzahomepage.jpg");
+    background-size: cover;
+    
 }
 
 .userlogin-div{
@@ -72,7 +78,7 @@
     top: 20px;
 }
 
-.userlogin-div input[type="text"], input[type="password"]{
+.userlogin-div input[type="text"], .userlogin-div input[type="password"]{
     width: 400px;
     margin: auto;
     margin-bottom: 10px;
