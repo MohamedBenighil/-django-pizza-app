@@ -23,7 +23,7 @@
     margin-top: 0px;
 }
 
-.message{
+.messagered{
     text-align: center;
     color: red;
 }
@@ -97,4 +97,9 @@
     display: block;
     margin: auto;
     
+}
+
+.danger{
+    /*margin-bottom: 3rem;*/
+    background-color: green;
 }
