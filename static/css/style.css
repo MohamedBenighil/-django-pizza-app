@@ -23,7 +23,7 @@
     margin-top: 0px;
 }
 
-.messagered{
+.message{
     text-align: center;
     color: red;
 }
@@ -95,11 +95,5 @@
 
 .userlogin-div input[type="submit"]{
     display: block;
-    margin: auto;
-    
-}
-
-.danger{
-    /*margin-bottom: 3rem;*/
-    background-color: green;
+    margin: auto;   
 }

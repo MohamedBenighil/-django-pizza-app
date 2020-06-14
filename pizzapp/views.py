@@ -4,6 +4,8 @@ from django.contrib import messages
 from .models import PizzaModel
 from django.contrib.auth.models import User
 from .models import UserModel
+
+import datetime
 # Create your views here.
 
 #Admin
@@ -19,7 +21,7 @@ def adminlogin(request):
         login(request, user)
         return redirect('adminhomeview')
     else:
-        #messages.add_message(request, messages.ERROR, "Invalid creadentials")
+        # you cant : messages.add_message(request, messages.ERROR, "Invalid creadentials")
         messages.error(request, 'Invalid credentials')
         return redirect(request.META['HTTP_REFERER'])
 
@@ -54,19 +56,45 @@ def useradd(request):
         #User exists
         messages.error(request, "User exists")
         return redirect(request.META['HTTP_REFERER'])
-        return redirect('homeview')
+        # you can : return redirect('homeview')
     else:
         #User does not exists
         user = User.objects.create_user(username=username, password=password)
         UserModel(userid = user.id, phone=phone).save()
         messages.success(request, "User created successfully")
         return redirect(request.META['HTTP_REFERER'])
-        #return redirect('homeview)
+        # you can : return redirect('homeview)
     
 
 #USERS
 def homeview(request):
     return render(request, 'pizzapp/home.html')
 
-#def userloginview(request):
-#    return render(request,'pizzapp/userlogin.html')
+
+def userloginview(request):
+    return render(request, 'pizzapp/userlogin.html')
+
+
+def userlogin(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(username=username, password=password)
+
+    # check if user exists
+    if user:
+        login(request, user)
+        return redirect('userhomeview')
+    else:
+        messages.error(request, "User does not exists")
+        return redirect(request.META['HTTP_REFERER'])
+        
+
+def userhomeview(request):
+    # Get account's user dynamically
+    username = request.user.username
+    context = {'username': username}
+    return render(request, 'pizzapp/userhomeview.html', context)
+
+def userlogout(request):
+    logout(request)
+    return redirect("userloginview")

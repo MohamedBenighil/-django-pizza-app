@@ -44,11 +44,8 @@ IMPORTANT : float: right <=> div-parent{position: relative} div-child{position: 
 IMPRTANT
 if you refere to css like : "{% static 'css/style.css' %}" => you refer to images "../img/imagename.jpg"
 
-
 ====================================20
-from django.contrib.auth.models import User 
-User model has 2 fields : username and password. But we have  3 fields => create custom model 
-userid= id of User model , phoneno= new attribute tha we want to add.
-
-User.objects.create_user(username=username, password=password).save()
-UserModel(userid, phonenum).save()
+- extend default user model 
+- settings.py : override  messages.ERROR: 'errot' to messages.ERROR: 'danger' for bootstrap
+- display message using bootstrap alerts
+- use class mb-0 ( margin-bottom )
