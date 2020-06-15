@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>User Login Page</h1>
+
 
 {% if messages %}
 {% for message in messages %}   
@@ -9,11 +9,13 @@
 </div>
 {% endfor  %}
 {% endif %}
-
-<form action="/userlogin/" method="post">
-    {% csrf_token %}
-    <input type="text" class="form-control" name="username" placeholder="Username">
-    <input type="password" name="password" class="form-control" placeholder="Password">
-    <input type="submit" class="btn btn-success" value="Login">
-</form>
+<div class="loginpage">
+    <h1>User Login Page</h1>
+    <form action="/userlogin/" method="post">
+        {% csrf_token %}
+        <input type="text" class="form-control" name="username" placeholder="Username">
+        <input type="password" name="password" class="form-control" placeholder="Password">
+        <input type="submit" class="btn btn-success" value="Login">
+    </form>
+</div>
 {% endblock %}

@@ -1,5 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Welcom {{username}}</h1>
-<a href="/userlogout" class="btn btn-danger">Logout</a>
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Welcome {{username}}</a>
+    <a href="/userlogout" class="btn btn-danger">Logout</a>
+</nav>
+
+{% if pizzas %}
+<div class="user-table-pizza-div">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Pizza Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for pizza in pizzas %}
+        <tr>
+          <th scope="row">{{pizza.name}}</th>
+          <td>{{pizza.price}}</td>
+          <td><input type="number" name="quantity"></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <input type="text" class="address" name="address" placeholder="Address">
+    <a href="#" class="btn btn-outline-success">Place order</a>
+
+</div>
+{% endif %}
+
 {% endblock %}

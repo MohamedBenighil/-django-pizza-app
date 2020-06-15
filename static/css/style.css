@@ -97,3 +97,48 @@
     display: block;
     margin: auto;   
 }
+
+
+.user-table-pizza-div{
+    width: 600px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.user-table-pizza-div table td input{
+    width: 100px;
+}
+
+.user-table-pizza-div a{
+    float: right;
+}
+.user-table-pizza-div .address{
+    width: 400px;
+    height: 37px;
+}
+
+.loginpage{
+    padding-top: 25px;
+    background-color: #fe6e00; 
+    width: 500px; 
+    height: 280px;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.loginpage h1{
+    text-align: center;
+    color: white;
+}
+
+.loginpage  input[name="username"], .loginpage  input[name="password"]{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.loginpage input[type="submit"]{
+    display: block;
+    margin: auto;
+}

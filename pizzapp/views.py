@@ -92,7 +92,7 @@ def userlogin(request):
 def userhomeview(request):
     # Get account's user dynamically
     username = request.user.username
-    context = {'username': username}
+    context = {'username': username, 'pizzas': PizzaModel.objects.all()}
     return render(request, 'pizzapp/userhomeview.html', context)
 
 def userlogout(request):
